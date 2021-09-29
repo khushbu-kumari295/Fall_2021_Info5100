@@ -8,24 +8,6 @@ import java.util.List;
  * Author: Khushbu Kumari
  */
 
-class RansomMagazineInput {
-    String ransomNote;
-    String magazine;
-
-    public RansomMagazineInput(String ransomNote, String magazine) {
-        this.ransomNote = ransomNote;
-        this.magazine = magazine;
-    }
-
-    public String getRansomNote() {
-        return ransomNote;
-    }
-
-    public String getMagazine() {
-        return magazine;
-    }
-}
-
 public class RansomNoteValidator {
 
     /**
