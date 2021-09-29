@@ -26,6 +26,7 @@ public class RansomNoteValidator {
         String magazine = input.getMagazine();
         String ransomNote = input.getRansomNote();
         if (ransomNote == null || ransomNote.equals("")) {
+            // No note needs to be created, so returning true
             return true;
         }
 
@@ -57,6 +58,8 @@ public class RansomNoteValidator {
         testCases.add(new RansomMagazineInput("a", "b"));
         testCases.add(new RansomMagazineInput("aa", "ab"));
         testCases.add(new RansomMagazineInput("aa", "aab"));
+        testCases.add(new RansomMagazineInput("aabc", "aabbbcc")); // true
+        testCases.add(new RansomMagazineInput("baaa", "aabbbcc")); // false (not enough a's)
         testCases.add(new RansomMagazineInput("aabc", ""));
         testCases.add(new RansomMagazineInput("", "aabc"));
         testCases.add(new RansomMagazineInput("", ""));
