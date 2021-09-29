@@ -1,4 +1,4 @@
-package com.Info5100.hw1;
+package Info5100_hw1;
 
 import java.util.*;
 
