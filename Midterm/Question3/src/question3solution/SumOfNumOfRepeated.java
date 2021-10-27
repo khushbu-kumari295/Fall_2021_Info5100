@@ -5,11 +5,8 @@ import java.util.*;
 public class SumOfNumOfRepeated {
 
     public static int sumOfRepeatedNum(int[] nums) {
-            if(nums == null) {
-                return 0;
-            }
         HashMap<Integer, Integer> hashMap = new HashMap<>();
-        for (int i = 0 ; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (!hashMap.containsKey(nums[i])) {
                 hashMap.put(nums[i], 1);
             } else {
@@ -19,17 +16,14 @@ public class SumOfNumOfRepeated {
         }
         int sum = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            if(hashMap.get(nums[i]) > 1) {
-
-               int result = hashMap.get(nums[i]);
-
+        for(int i = 0; i < nums.length; i++ ) {
+            if(hashMap.get(i)>1){
+                int result = hashMap.get(nums[i]);
                 sum += result;
             }
         }
         return sum;
     }
-
 
     public static void main(String[] args) {
 	// write your code here
