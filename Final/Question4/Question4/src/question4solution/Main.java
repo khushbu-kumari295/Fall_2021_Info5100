@@ -20,8 +20,9 @@ public class Main {
                 Arrays.asList("Robin","Lilly","Barney"),"Harison"));
         movies.add(new Movie("SuperGirl", 2003, 05,15,
                 Arrays.asList("Kara","George","Ria"),"Peter Manson"));
-        movies.stream().flatMap(movie -> movie.getMovieTitle()+ "Classic").collect(Collectors.toList());
-        movies.stream().filter(movie -> movie.releaseDate,)
+        movies.stream().flatMap(movie -> movies.
+
+
 
     }
 }
