@@ -1,6 +1,5 @@
 package question1solution;
 
-import java.awt.*;
     public class Main {
 
         public static void printMatrix(int [][]room) {
