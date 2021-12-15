@@ -1,6 +1,8 @@
 package question4solution;
 
 import java.util.*;
+import  java.util.Calendar;
+import java.util.Date;
 
 public class Movie {
     String movieTitle;
@@ -12,7 +14,7 @@ public class Movie {
         this.movieTitle = movieTitle;
         Calendar c = new GregorianCalendar(yyyy,mm,dd);
 
-        this.releaseDate = c.getTime();
+        Date date = new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime();
         Director = director;
         this.actors = new ArrayList<Object>();
     }
