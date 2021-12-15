@@ -33,7 +33,7 @@ public class Main {
         netflix.addGenre(g3);
 
         Calendar c = new GregorianCalendar(2000, 1, 1);
-        List<Movie> movies = netflix.Genres.stream().flatMap(g -> g.getMovies().stream()).collect(Collectors.toList());
+        List<Movie> movies = netflix.genres.stream().flatMap(g -> g.getMovies().stream()).collect(Collectors.toList());
         movies.forEach(m -> {
 
             m.setTitle(m.getReleaseDate().compareTo(c.getTime()) < 0 ? (m.getTitle() + " (Classic)") : m.getTitle());

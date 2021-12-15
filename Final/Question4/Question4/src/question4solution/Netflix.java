@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Netflix {
 
-    List<Genre> Genres;
+    List<Genre> genres;
 
     public Netflix() {
-        Genres = new ArrayList<>();
+        genres = new ArrayList<>();
     }
 
     public void addGenre(Genre g) {
-        Genres.add(g);
+        genres.add(g);
     }
 }
