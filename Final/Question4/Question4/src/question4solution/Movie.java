@@ -1,40 +1,90 @@
 package question4solution;
 
-import java.util.*;
-import  java.util.Calendar;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 public class Movie {
-    String movieTitle;
+
+    String title;
+
     Date releaseDate;
-    String Director;
-    ArrayList<Object> actors;
 
-    public Movie(String movieTitle, int yyyy, int mm, int dd, String director) {
-        this.movieTitle = movieTitle;
-        Calendar c = new GregorianCalendar(yyyy,mm,dd);
+    List<String> actors;
 
-        Date date = new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime();
-        Director = director;
-        this.actors = new ArrayList<Object>();
+    String director;
+
+
+    public Movie(String title, int year, int month, int day, List<String> actors, String director) {
+
+        this.title = title;
+
+        Calendar c = new GregorianCalendar(year, month, day);
+
+        this.releaseDate = c.getTime();
+
+        this.actors = actors;
+
+        this.director = director;
+
     }
 
-    public Movie(String abcd, int yyyy, int mm, int dd, List<String> asList, String sanjay) {
+
+    public String getTitle() {
+
+        return title;
+
     }
 
-    public String getMovieTitle() {
-        return movieTitle;
+
+    public void setTitle(String title) {
+
+        this.title = title;
+
     }
+
 
     public Date getReleaseDate() {
+
         return releaseDate;
+
     }
+
+
+    public void setReleaseDate(Date releaseDate) {
+
+        this.releaseDate = releaseDate;
+
+    }
+
+
+    public List<String> getActors() {
+
+        return actors;
+
+    }
+
+
+    public void setActors(List<String> actors) {
+
+        this.actors = actors;
+
+    }
+
 
     public String getDirector() {
-        return Director;
+
+        return director;
+
     }
 
-    public ArrayList<Object> getActors() {
-        return actors;
+
+    public void setDirector(String director) {
+
+        this.director = director;
+
     }
+
 }
+

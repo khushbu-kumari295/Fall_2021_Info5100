@@ -1,15 +1,17 @@
 package question4solution;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Netflix {
-    List<Genre> genres;
 
-    public Netflix(List<Genre> genres) {
-        this.genres = genres;
+    List<Genre> Genres;
+
+    public Netflix() {
+        Genres = new ArrayList<>();
     }
 
-    public List<Genre> getGenres() {
-        return genres;
+    public void addGenre(Genre g) {
+        Genres.add(g);
     }
 }
