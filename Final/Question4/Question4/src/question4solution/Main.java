@@ -2,18 +2,11 @@ package question4solution;
 
 import java.util.*;
 
-
-import java.util.*;
-
 import java.util.function.Predicate;
 
 import java.util.stream.Collectors;
 
-
-
 public class Main {
-
-
 
     public static void main(String[] args) {
 
@@ -30,15 +23,11 @@ public class Main {
         Movie m6 = new Movie("m6", 2001, 1, 16, Arrays.asList("A61", "A62", "A63"), "Director6");
 
 
-
-
-
         Genre g1 = new Genre("SciFi");
 
         g1.addMovie(m1);
 
         g1.addMovie(m2);
-
 
 
         Genre g2 = new Genre("Comedy");
@@ -48,13 +37,11 @@ public class Main {
         g2.addMovie(m4);
 
 
-
         Genre g3 = new Genre("Horror");
 
         g3.addMovie(m5);
 
         g3.addMovie(m6);
-
 
 
         Netflix netflix = new Netflix();
@@ -64,7 +51,6 @@ public class Main {
         netflix.addGenre(g2);
 
         netflix.addGenre(g3);
-
 
 
         // Part 2: Adding (Classic) to title
@@ -88,7 +74,6 @@ public class Main {
             System.out.println("Title:" + m.getTitle() + " Release Date: " + m.getReleaseDate());
 
         });
-
 
 
         // Part 3 : Latest 3 movies
@@ -115,8 +100,6 @@ public class Main {
 
         });
 
-
-
         // Part 4: Finding movie between 1990 and 2000
 
         Calendar c1 = new GregorianCalendar(2000, 1, 1);
@@ -126,8 +109,6 @@ public class Main {
         Calendar c2 = new GregorianCalendar(1990, 1, 1);
 
         Predicate<Date> dateAfter1990 = d -> d.after(c2.getTime());
-
-
 
         List<Movie> moviesBetween90And2000 = movies.stream().filter(m -> dateAfter1990.and(dateBefore2000).test(m.releaseDate)).collect(Collectors.toList());
 
@@ -139,8 +120,6 @@ public class Main {
 
         });
 
-
-
         // Add Release year to title of the movies
 
         System.out.println("\nAdding release year");
@@ -150,10 +129,6 @@ public class Main {
             System.out.println(addReleaseYearToTitle(m));
 
         });
-
-
-
-
 
         // Sorting one of the field : Title
 
@@ -168,20 +143,6 @@ public class Main {
         });
 
     }
-
-
-
-    /**
-
-     * method which that will add release year in the title of the movie and return the title and
-
-     * then use this method for all the movies.
-
-     * @param m
-
-     * @return
-
-     */
 
     private static String addReleaseYearToTitle(Movie m) {
 
